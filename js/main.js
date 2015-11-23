@@ -38,7 +38,7 @@ $(".dropdown-menu li a").click(function(){
 			url2: "http://en.wikipedia.org/w/api.php?action=query&prop=langlinks&format=json&lllang=id&lllimit=100&titles=Yogyakarta",								
 			//url: "http://id.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page="+locationwiki+"&callback=?",
 			//https://id.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=semarang&callback=?
-			console.log(url)
+			console.log(url);
 			contentType: "application/json; charset=utf-8",
 			async: true,
 			dataType: "json",
