@@ -3,5 +3,7 @@ $ = jQuery;
 	$('p[destinations]').each(function() {
 	var text = $(this).attr('destinations');
 	console.log(text)		
-	$('#Destinationinline').append("<h1>"+text+"</h1>");});			
+	$('#Destinationinline').append("<p>"+text+"</p>");});
+	$('a[hreflang]').each(function() {
+	lang = $(this).attr('hreflang');
 });
