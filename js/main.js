@@ -29,7 +29,7 @@ $(".dropdown-menu li a").click(function(){
 	success: function (data, textStatus, jqXHR) {
 		for (var i in data.query.pages) break;
 		if (lang=="id") locationwiki=data.query.pages[i].title;
-		console.log(lang)
+		//console.log(lang)
 		else locationwiki=data.query.pages[i].langlinks[0]['*'];
 		console.log(locationwiki);
 		//return;
