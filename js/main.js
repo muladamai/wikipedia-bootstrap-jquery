@@ -5,8 +5,8 @@ $ = jQuery;
 	//console.log(text)		
 	$('#Destinationinline').append("<p>"+locationwiki+"</p>");
 	//$('a[hreflang]').each(function() {
-	$('#langselect').each(function(){
-	var lang = $(this).attr('hreflang');
+	//$('#langselect a').each(function(){
+	var lang = $('#langselect a').attr('hreflang');
 	console.log(lang)
 	//var locationwiki = $(this).attr('hreflang');
 
@@ -78,7 +78,7 @@ $ = jQuery;
 	error: function (errorMessage) {
 	}
 	});
-	});
+	//});
 });	
 });
 $(".dropdown-menu li a").click(function(){
