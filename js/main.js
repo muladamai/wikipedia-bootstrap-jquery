@@ -6,9 +6,9 @@ $ = jQuery;
 	$('#Destinationinline').append("<p>"+text+"</p>");});
 	//$('a[hreflang]').each(function() {
 	$('#langselect').each(function(){
-	var lang = $(this).attr('hreflang');
+	//var lang = $(this).attr('hreflang');
 	//console.log(lang)
-	var locationwiki = lang;
+	var locationwiki = $(this).attr('hreflang');
 	});
 	$.ajax({
 	type: "GET",							
