@@ -5,5 +5,5 @@ $ = jQuery;
 	console.log(text)		
 	$('#Destinationinline').append("<p>"+text+"</p>");});
 	$('a[hreflang]').each(function() {
-	lang = $(this).attr('hreflang');
+	lang = $(this).attr('hreflang');});
 });
