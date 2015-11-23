@@ -29,7 +29,6 @@ $(".dropdown-menu li a").click(function(){
 	success: function (data, textStatus, jqXHR) {
 		for (var i in data.query.pages) break;
 		if (lang=="id") locationwiki=data.query.pages[i].title;
-		//console.log(lang)
 		else locationwiki=data.query.pages[i].langlinks[0]['*'];
 		console.log(locationwiki);
 		//return;
@@ -39,6 +38,7 @@ $(".dropdown-menu li a").click(function(){
 			url2: "http://en.wikipedia.org/w/api.php?action=query&prop=langlinks&format=json&lllang=id&lllimit=100&titles=Yogyakarta",								
 			//url: "http://id.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page="+locationwiki+"&callback=?",
 			//https://id.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=semarang&callback=?
+			console.log(url)
 			contentType: "application/json; charset=utf-8",
 			async: true,
 			dataType: "json",
