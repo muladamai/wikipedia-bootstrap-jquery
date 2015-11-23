@@ -9,7 +9,7 @@ $ = jQuery;
 	//var lang = $(this).attr('hreflang');
 	//console.log(lang)
 	var locationwiki = $(this).attr('hreflang');
-	});
+
 	$.ajax({
 	type: "GET",							
 	url: "http://en.wikipedia.org/w/api.php?action=query&prop=langlinks&format=json&lllang=id&lllimit=100&titles="+locationwiki+"&callback=?",
@@ -77,6 +77,7 @@ $ = jQuery;
 	},
 	error: function (errorMessage) {
 	}
+	});
 });	
 });
 $(".dropdown-menu li a").click(function(){
