@@ -7,11 +7,14 @@ $ = jQuery;
 	//$('a[hreflang]').each(function() {
 	$('#langselect').each(function(){
 	var lang = $(this).attr('hreflang');
-	//console.log(lang)});
+	//console.log(lang)
+	});
 });
 $(".dropdown-menu li a").click(function(){
   var selText = $(this).text();
   var hrefText = $(this).attr('hreflang');
-  $(this).parents('.btn-group').find('.dropdown-toggle').html(selText+' <span class="caret"></span>'),
-  $(this).parents('.btn-group').find('.dropdown-toggle').attr("hreflang", hrefText),
-  console.log(hrefText);});
+  $(this).parents('.btn-group').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
+  $(this).parents('.btn-group').find('.dropdown-toggle').attr("hreflang", hrefText);
+  console.log(hrefText);
+	
+});
