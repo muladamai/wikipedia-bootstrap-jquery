@@ -5,8 +5,8 @@ $ = jQuery;
 	console.log(text)		
 	$('#Destinationinline').append("<p>"+text+"</p>");});
 	$('a[hreflang]').each(function() {
-	var lang = $(this).attr('hreflang');});
-	console.log(lang)
+	var lang = $(this).attr('hreflang');
+	console.log(lang)});
 });
 $(".dropdown-menu li a").click(function(){
   var selText = $(this).text();
