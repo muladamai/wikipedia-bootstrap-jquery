@@ -1,14 +1,14 @@
 $ = jQuery;
 	$(document).ready(function(){
 	$('p[destinations]').each(function() {
-	var text = $(this).attr('destinations');
+	var locationwiki = $(this).attr('destinations');
 	//console.log(text)		
-	$('#Destinationinline').append("<p>"+text+"</p>");});
+	$('#Destinationinline').append("<p>"+locationwiki+"</p>");
 	//$('a[hreflang]').each(function() {
 	$('#langselect').each(function(){
-	//var lang = $(this).attr('hreflang');
+	var lang = $(this).attr('hreflang');
 	//console.log(lang)
-	var locationwiki = $(this).attr('hreflang');
+	//var locationwiki = $(this).attr('hreflang');
 
 	$.ajax({
 	type: "GET",							
@@ -77,6 +77,7 @@ $ = jQuery;
 	},
 	error: function (errorMessage) {
 	}
+	});
 	});
 });	
 });
