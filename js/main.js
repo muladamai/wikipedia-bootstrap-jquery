@@ -42,10 +42,11 @@ $(".dropdown-menu li a").click(function(){
 			async: true,
 			dataType: "json",
 			success: function (data, textStatus, jqXHR) {
-				console.log(locationwiki)
+				console.log(data);
+				//console.log(locationwiki);
 				var markup = data.parse.text["*"];
 				var blurb = $('<div></div>').html(markup);
-				console.log('url:'+url)
+				//console.log('url:'+url)
 				// remove links as they will not work
 				blurb.find('a').each(function() { $(this).replaceWith($(this).html()); });
 				
