@@ -28,8 +28,8 @@ $(".dropdown-menu li a").click(function(){
 	dataType: "json",
 	success: function (data, textStatus, jqXHR) {
 		for (var i in data.query.pages) break;
-		if (lang=="id") locationwiki=data.query.pages[i].langlinks[0]['*'];
-		else locationwiki=data.query.pages[i].title;
+		if (lang=="id") locationwiki=data.query.pages[i].title;
+		else locationwiki=data.query.pages[i].langlinks[0]['*'];
 		console.log(locationwiki);
 		//return;
 		$.ajax({
