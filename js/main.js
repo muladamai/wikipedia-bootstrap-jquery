@@ -8,7 +8,7 @@ $ = jQuery;
 	//$('#langselect a').each(function(){
 	var lang = $('#langselect a').attr('hreflang');
 	console.log(lang)
-	//var locationwiki = $(this).attr('hreflang');
+	var locationwiki = $('p[destinations]').attr('destinations');
 
 	$.ajax({
 	type: "GET",							
