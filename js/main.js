@@ -34,7 +34,7 @@ $(".dropdown-menu li a").click(function(){
 		//return;
 		$.ajax({
 			type: "GET",	
-			url: "http://"+(lang=="en"?"id":"en")+".wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page="+locationwiki+"&callback=?",
+			url: "http://"+(lang=="id"?"en":"id")+".wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page="+locationwiki+"&callback=?",
 			url2: "http://en.wikipedia.org/w/api.php?action=query&prop=langlinks&format=json&lllang=id&lllimit=100&titles=Yogyakarta",								
 			//url: "http://id.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page="+locationwiki+"&callback=?",
 			//https://id.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=semarang&callback=?
@@ -63,7 +63,7 @@ $(".dropdown-menu li a").click(function(){
 		
 		$.ajax({
 			type: "GET",	
-			url: "https://"+(lang=="en"?"id":"en")+".wikipedia.org/w/api.php?action=query&prop=extracts&titles="+locationwiki+"&format=json&prop=pageimages&pithumbsize=220&callback=?",
+			url: "https://"+(lang=="id"?"en":"id")+".wikipedia.org/w/api.php?action=query&prop=extracts&titles="+locationwiki+"&format=json&prop=pageimages&pithumbsize=220&callback=?",
 			//url: "http://id.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page="+locationwiki+"&callback=?",
 			//https://id.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=semarang&callback=?
 			contentType: "application/json; charset=utf-8",
