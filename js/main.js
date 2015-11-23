@@ -38,7 +38,6 @@ $(".dropdown-menu li a").click(function(){
 			url2: "http://en.wikipedia.org/w/api.php?action=query&prop=langlinks&format=json&lllang=id&lllimit=100&titles=Yogyakarta",								
 			//url: "http://id.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page="+locationwiki+"&callback=?",
 			//https://id.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=semarang&callback=?
-			console.log(url);
 			contentType: "application/json; charset=utf-8",
 			async: true,
 			dataType: "json",
@@ -46,7 +45,7 @@ $(".dropdown-menu li a").click(function(){
 				console.log(locationwiki)
 				var markup = data.parse.text["*"];
 				var blurb = $('<div></div>').html(markup);
-				
+				console.log('url:'+url)
 				// remove links as they will not work
 				blurb.find('a').each(function() { $(this).replaceWith($(this).html()); });
 				
@@ -75,7 +74,7 @@ $(".dropdown-menu li a").click(function(){
 				
 				for (var i in data.query.pages) break;											
 				var imgurl = data.query.pages[i].thumbnail.source;
-				console.log('imgurl:'+imgurl)
+				//console.log('imgurl:'+imgurl)
 				$ ("#wikiimg").attr("src", imgurl)
 				
 				
