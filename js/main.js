@@ -7,7 +7,7 @@ $ = jQuery;
 	//$('a[hreflang]').each(function() {
 	$('#langselect').each(function(){
 	var lang = $(this).attr('hreflang');
-	//console.log(lang)
+	console.log(lang)
 	//var locationwiki = $(this).attr('hreflang');
 
 	$.ajax({
@@ -22,7 +22,7 @@ $ = jQuery;
 		for (var i in data.query.pages) break;
 		if (lang=="id") locationwiki=data.query.pages[i].title;
 		else locationwiki=data.query.pages[i].langlinks[0]['*'];
-		//console.log(locationwiki);
+		console.log(locationwiki);
 		//return;
 		$.ajax({
 			type: "GET",	
@@ -62,7 +62,7 @@ $ = jQuery;
 			async: true,
 			dataType: "json",
 			success: function (data, textStatus, jqXHR) {
-				console.log(data);
+				//console.log(data);
 				
 				for (var i in data.query.pages) break;											
 				var imgurl = data.query.pages[i].thumbnail.source;
