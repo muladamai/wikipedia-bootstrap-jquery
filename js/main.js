@@ -14,5 +14,4 @@ $(".dropdown-menu li a").click(function(){
   var hrefText = $(this).attr('hreflang');
   $(this).parents('.btn-group').find('.dropdown-toggle').html(selText+' <span class="caret"></span>'),
   $(this).parents('.btn-group').find('.dropdown-toggle').attr("hreflang", hrefText),
-  console.log(hrefText);
-});
+  console.log(hrefText);});
